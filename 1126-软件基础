@@ -52,4 +52,31 @@
 			tomcat  java
 			iis     微软(传统类型公司用的比较多)
 		数据库服务器
+			oracle    中大型企业
+			mysql     互联网公司
+			sqlserver  传统
+	c.常见搭配
+		操作系统    web服务器    数据库服务器
+		win           iis        sqlserver
+		             apache      mysql
+		             tomcat      mysql/oracle
+		linux        apache      mysql
+					 nginx       mysql
+					 tomcat      mysql/oracle
+3.ecshop商城项目部署
+	a.phpstudy软件简介
+		集成了apache和mysql
+		如果面板上提示绿色说明软件正常安装
+	b.下载解压ecshop.zip文件
+	c.复制解压后的ecshop1文件夹到phpstudy的安装路径WWW文件夹中
+	d.浏览器中输入127.0.0.1/ecshop1按照提示安装
+		配置系统注意:
+		数据库主机:localhost
+		端口号:    3306
+		用户名:    root
+		密码:      root
+		数据库名:  test
+
+
+
 
