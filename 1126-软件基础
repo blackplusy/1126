@@ -126,7 +126,44 @@
 			netstat -an 查看当前系统开放的所有端口
 		0.0.0.0  	任意IP
 		127.0.0.1   localhost 电脑本机
-		
+
+
+5.数据库
+	a.数据库基础
+		数据库分为2部分，数据库软件、数据库数据
+		通常我们所说的数据库是数据
+		数据库是由表组成，表是由数据组成
+	b.mysql的登录(命令提示符)
+		1>登录的命令
+			mysql
+				登录本地数据库(当数据库没有密码时候)
+			mysql -u root -p
+				管理员登录本地数据库(-u 代表用户 root是mysql的管理员 -p 代表密码)
+			mysql -h 127.0.0.1 -u root -p
+				管理员登录IP是127.0.0.1的数据库(-h 链接的目标IP)
+		2>登录的方式
+			问题:'mysql' 不是内部或外部命令，也不是可运行的程序或批处理文件。
+			系统无法找到mysql的命令
+			解决办法
+			21>进入到mysql的命令所在位置
+				图形化进入到所在文件夹，在地址栏中输入cmd
+			22>设置环境变量(推荐，设置一次永久有效)
+				计算机--属性--高级--环境变量--系统变量--Path中添加mysql的命令的路径
+				;F:\phpStudy\MySQL\bin
+				确定--确定--确定
+	c.mysql的基础命令(已经登录mysql的基础上)
+		show databases;
+			查看当前有哪些数据库
+		select database();
+			查看当前数据库的名字
+			如果当前数据库名字是null的话代表当前没有选择任何一个数据库
+		use test;
+			切换当前数据库是test
+		show tables;
+			查看当前数据库中有哪些表
+		select * from ecs_goods;
+		select * from ecs_goods \G
+			查看ecs_goods表中所有数据
 
 
 
