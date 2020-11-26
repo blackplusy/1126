@@ -164,6 +164,59 @@
 		select * from ecs_goods;
 		select * from ecs_goods \G
 			查看ecs_goods表中所有数据
+6.mysql的表结构
+	表是由行、列、数据类型，表名
+	a.数据类型
+		数值类型 123 1.5  		int(整数)  float(小数)
+		字符类型 'abc' 'test'    char(定长) varchar(变长) 
+			定义字符类型数据时候通常会定义最多放多少个字符
+			char(10)      插入6个字符  存储10个字符  速度快
+			varchar(10)   插入6个字符  存储6个字符   节省空间
+		日期类型 '2000-01-01'     date
+	b.表格的创建
+		语法:create table 表名(
+				列  数据类型,
+				列  数据类型,
+				。。。。。。
+			);
+		需求:创建一个表格商品(goods),里面3个列商品名称 name,字符类型，商品价格 price 数值类型，出厂日期 ddate 日期类型
+			create table goods(
+				name char(20),
+				price int,
+				ddate date
+			);
+	c.查看表结构
+		语法:desc 表名;
+		需求:查看goods表表结构
+			desc goods;
+	d.操作mysql所使用的工具
+		mysql workbech
+		sqlyog(小海豚)
+		mysql-front  (phpstudy面板中--mysql管理器--)
+		dbeaver
+	d.修改表结构
+		增加列
+		语法:alter table 表 add 列 数据类型;
+		需求:goods表中增加列 id 数值类型
+		alter table goods add id int;
+
+		修改列
+		语法:alter table 表 modify 列 数据类型;
+		需求:goods表中修改id的数据类型为字符类型
+		alter table goods modify id char(20);
+
+		删除列
+		语法:alter table 表 drop column 列;
+		需求:goods表中删除id列
+		alter table goods drop column id;
+	e.删除 表结构
+		语法:drop table 表;
+		需求:删除 goods表
+		drop table goods;
+		
+
+
+
 
 
 
