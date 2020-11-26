@@ -76,6 +76,60 @@
 		用户名:    root
 		密码:      root
 		数据库名:  test
+	e.ecshop的前台和后台
+		前台页面:http://127.0.0.1/ecshop1/
+		后台页面:http://127.0.0.1/ecshop1/admin
+			用户名
+			密码
+
+
+4.phpstudy软件简介
+	a.集成工具
+		xampp
+			x:任意操作系统
+			a:apache
+			m:mysql
+			p:php
+			p:perl
+		wamp
+			w:windows
+			a:apache
+			m:mysql
+			p:php
+		phpstudy
+	b.phpstudy简介
+		apache 文件夹    存放web服务器软件的位置
+			bin          存放apache命令的位置(软件行业中只要见到bin说明就是命令)
+			conf         存放apache配置文件的位置
+				httpd.conf apache的主配置文件
+			logs         存放apache日志的位置
+		mysql 文件夹     存放mysql数据库的位置
+			bin          存放mysql的命令的位置
+			data         存放mysql的数据的位置
+			lib          存放mysql的库文件的位置
+			my.ini       mysql的配置文件
+		WWW  文件夹       存放项目代码的位置
+	c.检查服务和端口
+		apache的主服务: httpd
+		mysql的主服务： mysqld
+		win+r--cmd(打开命令提示符)--tasklist | find "mysqld"
+			tasklist   查看当前系统中运行的所有程序
+			|          管道，前面的输出作为后面的输入
+			find       搜索
+			如果有看到返回mysqld.exe说明mysql服务正常启动
+			tasklist | find "httpd"
+			如果有看到返回httpd.exe，说明apache服务正常启动
+		端口:区分应用层进程的标识
+		apache的端口:80
+		mysql的端口：3306
+		win+r--cmd(打开命令提示符)--netstat -an | find "3306"
+			netstat -an 查看当前系统开放的所有端口
+		0.0.0.0  	任意IP
+		127.0.0.1   localhost 电脑本机
+		
+
+
+
 
 
 
