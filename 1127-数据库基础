@@ -1,0 +1,63 @@
+1.常见的数据库
+2.数据库的安装
+3.数据库的表结构
+	a.创建表结构
+		语法:create table 表(
+				列  数据类型,
+				列  数据类型,
+				...
+			);
+	b.修改表结构
+		新增列
+			语法:alter table 表 add 列 数据类型;
+		修改列
+			语法:alter table 表 modify 列 数据类型;
+		删除列
+			语法:alter table 表 drop column 列;
+	c.删除表结构
+		语法:drop table 表;
+==============================================================
+1.mysql数据的新增、修改、删除
+	数值类型数据直接使用
+	字符类型数据使用单引号
+	日期类型数据使用单引号
+	create table goods (
+		name  char(10),   #商品名称
+		price  int,       #商品售价
+		ddate  date       #出厂日期
+	);
+	a.mysql的数据新增
+		1>向表中指定列新增数据
+			列的顺序和值的顺序一定要对应
+			语法:insert into 表(列1,列2...) values(值1,值2...)
+			需求:向goods表中新增数据商品名字，o8ma,售价250
+				insert into goods(name,price) values('o8ma',250);
+		2>向表中所有列新增数据		
+			语法:insert into 表 values(值1,值2....);
+			需求:向goods表中新增数据，商品名称，simida，价格119，出厂日期 2020-01-01
+				insert into goods values('simida',119,'2020-01-01');
+	b.mysql的数据修改
+		语法:update 表 set 列=值 where 条件;
+		如果不加where条件，默认修改的是整个列的数据
+		如果增加where条件，修改的是满足条件的行的数据
+		需求:修改goods表中名字是o8ma的价格为10000
+		update goods set price=10000 where name='o8ma';
+		需求:修改所有商品的价格为0
+		update goods set price=0;
+	c.mysql的数据删除
+		delete    删除指定数据 删除数据可以找回 DML
+		truncate  删除全表数据 删除数据无法找回 DDL  截断表(破坏了表中数据的结构)
+		1>delete
+			delete from 表 where 条件;
+			需求:删除goods表中名字是o8ma的所有信息
+			delete from goods where name='o8ma';
+			需求:删除goods表中所有数据
+			delete from goods;
+		2>truncate
+			truncate table 表;
+			需求:删除goods表中所有数据
+			truncate table goods;
+			
+
+
+
